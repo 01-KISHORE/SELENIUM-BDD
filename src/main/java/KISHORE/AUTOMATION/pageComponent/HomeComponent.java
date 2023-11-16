@@ -1,0 +1,74 @@
+package KISHORE.AUTOMATION.pageComponent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+public class HomeComponent {
+    public WebDriver driver;
+
+    @FindBy(how = How.PARTIAL_LINK_TEXT, using = "Welcome")
+    private WebElement welcome;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='caret']")
+    private WebElement userDropdown;
+
+    @FindBy(how = How.XPATH, using = "//a[.=' Log out']")
+    private WebElement logoutOption;
+
+    public HomeComponent(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void logout() {
+        userDropdown.click();
+        logoutOption.click();
+    }
+
+    public void selectTab(String tabName) {
+        switch (tabName) {
+            case "Projects": {
+                driver.findElement(By.linkText("Projects"));
+            }
+            case "Working Groups": {
+                driver.findElement(By.linkText("Working Groups"));
+            }
+            case "Members": {
+                driver.findElement(By.linkText("Members"));
+            }
+            case "More": {
+                driver.findElement(By.linkText("More"));
+            }
+            default: {
+                System.out.println("SELECTED : " + tabName + " tab");
+            }
+        }
+    }
+
+
+    public void verifyLogin(String result) {
+        boolean messageDisplayed = false;
+        try {
+            messageDisplayed = welcome.isDisplayed();
+            if (messageDisplayed && result.equalsIgnoreCase("true"))
+                System.out.println("Valid User Successfully Logged IN");
+            else if (!messageDisplayed && !result.equalsIgnoreCase("true"))
+                System.out.println("Invalid User Failed to Log IN");
+            else if (!messageDisplayed && result.equalsIgnoreCase("true")) {
+                System.out.println("Valid User Not able to Log IN");
+                Assert.fail();
+            } else if (messageDisplayed && !result.equalsIgnoreCase("true")) {
+                System.out.println("Invalid User successfully Log IN");
+                Assert.fail();
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("LOGIN EXCEPTION");
+        }
+    }
+}
