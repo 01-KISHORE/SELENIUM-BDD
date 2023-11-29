@@ -1,15 +1,12 @@
 package stepDefinition;
 
 import KISHORE.AUTOMATION.locators.TabOptions;
-import KISHORE.AUTOMATION.utility.SikuliCl;
 import base.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.rules.Stopwatch;
 import org.openqa.selenium.WebDriver;
 import KISHORE.AUTOMATION.pageObject.DeskObject;
 import org.sikuli.script.FindFailed;
@@ -55,6 +52,12 @@ public class CommonSteps {
     @After("@DB")
     public void closingDB() {
         System.out.println("DB instance Closed");
+    }
+
+    //  PARAMETER TYPE
+    @ParameterType(value = "true|True|TRUE|false|False|FALSE")
+    public Boolean cBoolean(String value) {
+        return Boolean.valueOf(value);
     }
 
     //  STEP-DEFINITIONS
@@ -111,5 +114,10 @@ public class CommonSteps {
         } else {
             System.out.println("NAME and AGE is NOT UPDATED");
         }
+    }
+
+    @Then("Testing Boolean Parameter type {cBoolean}")
+    public void testParameterType(boolean boo) {
+        if (boo) System.out.println("Boolean ParameterType is Working : " + boo);
     }
 }
