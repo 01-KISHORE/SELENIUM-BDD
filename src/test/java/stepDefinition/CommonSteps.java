@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import KISHORE.AUTOMATION.locators.TabOptions;
+import KISHORE.AUTOMATION.utility.SikuliCl;
 import base.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -16,7 +17,6 @@ import java.util.List;
 public class CommonSteps {
 
     public static WebDriver driver;
-
     public DeskObject deskObject;
     private String name;
     private String age;
@@ -27,14 +27,14 @@ public class CommonSteps {
         System.out.println("TEST STARTED ");
         BaseClass baseClass = new BaseClass();
         List<Object> objects = baseClass.launchBrowser();
-        this.driver = (WebDriver) objects.get(0);
-        this.deskObject = (DeskObject) objects.get(1);
+        driver = (WebDriver) objects.get(0);
+        deskObject = (DeskObject) objects.get(1);
     }
 
     @Before(order = 1)
     public void hitURL() {
         System.out.println("Hitting URL");
-        this.driver.get("https://accounts.eclipse.org");
+        driver.get("https://accounts.eclipse.org");
     }
 
     @After(order = 1)
@@ -64,7 +64,7 @@ public class CommonSteps {
     @When("User logs into the ECLIPSE application with {string} and {string}")
     public void login(String username, String password) throws FindFailed, InterruptedException {
         deskObject.loginComponent().login(username, password);
-//      SikuliCl.clickOnImage("D:/SELENIUM-CUCUMBER/src/main/resources/sikkuliImage/SearchIcon.png");
+        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
     }
 
     @When("Opens {string} tab on Home Page")

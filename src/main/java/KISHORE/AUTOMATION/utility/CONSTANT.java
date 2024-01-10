@@ -4,7 +4,6 @@ import org.openqa.selenium.devtools.DevTools;
 
 public class CONSTANT {
     public static  int BEFORE_ELEMENT = 0;
-    public static  String ORIGINAL_WINDOW ;
     public static  DevTools DEVTOOLS ;
     public static String BROWSER_TYPE;
     public static String URL;

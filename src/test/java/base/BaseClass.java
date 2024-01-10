@@ -2,7 +2,6 @@ package base;
 
 import KISHORE.AUTOMATION.helper.CommonHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseClass extends CommonHelper {
-    
-    public static WebDriver driver;
 
     public BaseClass() {
         super();
@@ -32,7 +29,7 @@ public class BaseClass extends CommonHelper {
             cap.setCapability(ChromeOptions.CAPABILITY, options);
             options.merge(cap);
             driver = new ChromeDriver(options);
-//          driver.manage().deleteAllCookies();
+            driver.manage().deleteAllCookies();
             driver.manage().window().maximize();
         } else if (CONSTANT.BROWSER_TYPE.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
@@ -43,9 +40,8 @@ public class BaseClass extends CommonHelper {
         } else if (CONSTANT.BROWSER_TYPE.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
         }
-        new CommonHelper(driver);
         DeskObject deskObject = new DeskObject(driver);
-        List<Object> objects = new ArrayList<Object>();
+        List<Object> objects = new ArrayList<>();
         objects.add(driver);
         objects.add(deskObject);
         return objects;

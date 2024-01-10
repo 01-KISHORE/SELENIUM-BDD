@@ -10,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class HomeComponent {
-    public WebDriver driver;
+
+    private final WebDriver driver;
 
     @FindBy(how = How.PARTIAL_LINK_TEXT, using = "Welcome")
     private WebElement welcome;
@@ -51,11 +52,9 @@ public class HomeComponent {
         }
     }
 
-
     public void verifyLogin(String result) {
-        boolean messageDisplayed = false;
         try {
-            messageDisplayed = welcome.isDisplayed();
+            boolean messageDisplayed = welcome.isDisplayed();
             if (messageDisplayed && result.equalsIgnoreCase("true"))
                 System.out.println("Valid User Successfully Logged IN");
             else if (!messageDisplayed && !result.equalsIgnoreCase("true"))

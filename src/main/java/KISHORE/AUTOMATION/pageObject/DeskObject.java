@@ -6,7 +6,8 @@ import KISHORE.AUTOMATION.pageComponent.ProjectComponent;
 import org.openqa.selenium.WebDriver;
 
 public class DeskObject {
-    private WebDriver driver;
+
+    public final WebDriver driver;
 
     public DeskObject(WebDriver driver) {
         this.driver = driver;

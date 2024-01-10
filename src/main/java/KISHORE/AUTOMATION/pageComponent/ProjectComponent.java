@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ProjectComponent {
 
-    public WebDriver driver;
+    public final WebDriver driver;
     @FindBy(how = How.PARTIAL_LINK_TEXT, using = "Projects")
     private WebElement projectsTabLink;
 
@@ -49,7 +49,7 @@ public class ProjectComponent {
                 if (count == 0 && row.findElement(By.xpath("//a[contains(text(),'" + projectName + "')]")).getText().contains(projectName)) {
                     System.out.println("Project Filter is working as expected");
                     break;
-                } else  {
+                } else {
                     System.out.println("Project Filter is not working as expected");
                     Assert.fail();
                 }
