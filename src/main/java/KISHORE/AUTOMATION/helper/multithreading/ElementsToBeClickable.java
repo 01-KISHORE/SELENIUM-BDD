@@ -14,6 +14,6 @@ public class ElementsToBeClickable extends Thread {
     }
     @Override
     synchronized public void run() {
-            ExplicitWait.waitForElementsToBeClickable(locator, pollTime);
+            ExplicitWait.waituntilElementToBeClickable(locator, pollTime);
     }
 }

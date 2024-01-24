@@ -1,5 +1,6 @@
 package base;
 
+import KISHORE.AUTOMATION.helper.Alerts;
 import KISHORE.AUTOMATION.helper.CommonHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,6 +45,7 @@ public class BaseClass extends CommonHelper {
         List<Object> objects = new ArrayList<>();
         objects.add(driver);
         objects.add(deskObject);
+        objects.add(new Alerts());
         return objects;
     }
 }

@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import KISHORE.AUTOMATION.helper.Alerts;
 import KISHORE.AUTOMATION.locators.TabOptions;
 import KISHORE.AUTOMATION.utility.SikuliCl;
 import base.BaseClass;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import KISHORE.AUTOMATION.pageObject.DeskObject;
 import org.sikuli.script.FindFailed;
 
+import java.io.File;
 import java.util.List;
 
 public class CommonSteps {
@@ -29,6 +31,7 @@ public class CommonSteps {
         List<Object> objects = baseClass.launchBrowser();
         driver = (WebDriver) objects.get(0);
         deskObject = (DeskObject) objects.get(1);
+        Alerts alert = (Alerts) objects.get(2);
     }
 
     @Before(order = 1)
@@ -40,7 +43,7 @@ public class CommonSteps {
     @After(order = 1)
     public void teardown() {
         System.out.println("TEST COMPLETE");
-        driver.quit();
+        //  driver.quit();
     }
 
     //  LOCAL : TAGGED HOOKS
@@ -82,6 +85,15 @@ public class CommonSteps {
     @When("User logs out of application")
     public void logout() {
         deskObject.homeComponent().logout();
+    }
+
+    @When("User does Edit PROFILE by uploading new ProfilePicture {string}, {string}")
+    public void editProfile(String filePath, String password) throws FindFailed {
+        deskObject.homeComponent().selectProfileOption("Edit my account");
+        deskObject.editProfileComponent().updateProfile(new File(filePath), password);
+        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
+        Alerts.isAlertPresent();
+        Alerts.acceptAlert();
     }
 
     @Then("Login result should be {string}")

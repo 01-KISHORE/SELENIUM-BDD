@@ -1,71 +1,59 @@
 package KISHORE.AUTOMATION.helper;
 
+import KISHORE.AUTOMATION.utility.CONSTANT;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 
-public class Alerts extends CommonHelper{
-    // Switch to alert
+public class Alerts extends CommonHelper {
+
     public static Alert getAlert() {
         return driver.switchTo().alert();
     }
-    // Accept the alert
-    public static void AcceptAlert() {
+
+    public static void acceptAlert() {
         getAlert().accept();
     }
-    // Dismiss the alert
-    public static void DismissAlert() {
+
+    public static void dismissAlert() {
         getAlert().dismiss();
     }
-    /*
-     * Get text associated with alert
-     *
-     * @return String value of the alert message.
-     */
+
     public static String getAlertText() {
-        AutoWait.autoWaitAlert();
         return getAlert().getText();
-
     }
-    /*
-     * Check whether alert is present or not
-     *
-     * @return the boolean value
-     */
+
     public static boolean isAlertPresent() {
+        boolean flag = false;
         try {
-            driver.switchTo().alert();
-            return true;
+            for (int i = 1; i <= CONSTANT.STEP_RETRY; i++) {
+                if (!flag) {
+                    ExplicitWait.pause(1);
+                    Alert alert = driver.switchTo().alert();
+                    if (alert != null) {
+                        flag = true;
+                        break;
+                    }
+                }
+            }
         } catch (NoAlertPresentException e) {
-            return false;
+            flag = false;
         }
+        return flag;
     }
 
-    /*
-     * Accept if alert is present or else return boolean value
-     */
-    public static void AcceptAlertIfPresent() {
-        if (!isAlertPresent())
-            return;
-        AcceptAlert();
+    public static void acceptAlertIfPresent() {
+        if (!isAlertPresent()) return;
+        acceptAlert();
     }
 
-    /*
-     * Accept if alert is present or else return boolean value
-     */
-    public static void DismissAlertIfPresent() {
-        if (!isAlertPresent())
-            return;
-        DismissAlert();
+    public static void dismissAlertIfPresent() {
+        if (!isAlertPresent()) return;
+        dismissAlert();
     }
 
-    /*
-     * Accept Prompt alert if alert is present after sending the text or else return
-     * boolean value.
-     */
     public static void AcceptPrompt(String text) {
-        if (!isAlertPresent())
-            return;
-        org.openqa.selenium.Alert alert = getAlert();
+        if (!isAlertPresent()) return;
+        Alert alert = getAlert();
         alert.sendKeys(text);
         alert.accept();
     }

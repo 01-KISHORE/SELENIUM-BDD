@@ -1,5 +1,6 @@
 package KISHORE.AUTOMATION.pageObject;
 
+import KISHORE.AUTOMATION.pageComponent.EditProfileComponent;
 import KISHORE.AUTOMATION.pageComponent.HomeComponent;
 import KISHORE.AUTOMATION.pageComponent.LoginComponent;
 import KISHORE.AUTOMATION.pageComponent.ProjectComponent;
@@ -23,5 +24,9 @@ public class DeskObject {
 
     public ProjectComponent projectComponent() {
         return new ProjectComponent(driver);
+    }
+
+    public EditProfileComponent editProfileComponent(){
+        return new EditProfileComponent(driver);
     }
 }
