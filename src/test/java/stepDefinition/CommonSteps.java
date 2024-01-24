@@ -1,25 +1,24 @@
 package stepDefinition;
 
+import KISHORE.AUTOMATION.helper.Alerts;
 import KISHORE.AUTOMATION.locators.TabOptions;
 import KISHORE.AUTOMATION.utility.SikuliCl;
 import base.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.rules.Stopwatch;
 import org.openqa.selenium.WebDriver;
 import KISHORE.AUTOMATION.pageObject.DeskObject;
 import org.sikuli.script.FindFailed;
 
+import java.io.File;
 import java.util.List;
 
 public class CommonSteps {
 
     public static WebDriver driver;
-
     public DeskObject deskObject;
     private String name;
     private String age;
@@ -30,20 +29,21 @@ public class CommonSteps {
         System.out.println("TEST STARTED ");
         BaseClass baseClass = new BaseClass();
         List<Object> objects = baseClass.launchBrowser();
-        this.driver = (WebDriver) objects.get(0);
-        this.deskObject = (DeskObject) objects.get(1);
+        driver = (WebDriver) objects.get(0);
+        deskObject = (DeskObject) objects.get(1);
+        Alerts alert = (Alerts) objects.get(2);
     }
 
     @Before(order = 1)
     public void hitURL() {
         System.out.println("Hitting URL");
-        this.driver.get("https://accounts.eclipse.org");
+        driver.get("https://accounts.eclipse.org");
     }
 
     @After(order = 1)
     public void teardown() {
         System.out.println("TEST COMPLETE");
-        driver.quit();
+        //  driver.quit();
     }
 
     //  LOCAL : TAGGED HOOKS
@@ -57,11 +57,17 @@ public class CommonSteps {
         System.out.println("DB instance Closed");
     }
 
+    //  PARAMETER TYPE
+    @ParameterType(value = "true|True|TRUE|false|False|FALSE")
+    public Boolean cBoolean(String value) {
+        return Boolean.valueOf(value);
+    }
+
     //  STEP-DEFINITIONS
     @When("User logs into the ECLIPSE application with {string} and {string}")
     public void login(String username, String password) throws FindFailed, InterruptedException {
         deskObject.loginComponent().login(username, password);
-//      SikuliCl.clickOnImage("D:/SELENIUM-CUCUMBER/src/main/resources/sikkuliImage/SearchIcon.png");
+        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
     }
 
     @When("Opens {string} tab on Home Page")
@@ -79,6 +85,15 @@ public class CommonSteps {
     @When("User logs out of application")
     public void logout() {
         deskObject.homeComponent().logout();
+    }
+
+    @When("User does Edit PROFILE by uploading new ProfilePicture {string}, {string}")
+    public void editProfile(String filePath, String password) throws FindFailed {
+        deskObject.homeComponent().selectProfileOption("Edit my account");
+        deskObject.editProfileComponent().updateProfile(new File(filePath), password);
+        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
+        Alerts.isAlertPresent();
+        Alerts.acceptAlert();
     }
 
     @Then("Login result should be {string}")
@@ -111,5 +126,10 @@ public class CommonSteps {
         } else {
             System.out.println("NAME and AGE is NOT UPDATED");
         }
+    }
+
+    @Then("Testing Boolean Parameter type {cBoolean}")
+    public void testParameterType(boolean boo) {
+        if (boo) System.out.println("Boolean ParameterType is Working : " + boo);
     }
 }

@@ -1,6 +1,7 @@
 package KISHORE.AUTOMATION.locators;
 
 public enum TabOptions {
+// Eclipse Project Tab names
 
     Projects {
         @Override

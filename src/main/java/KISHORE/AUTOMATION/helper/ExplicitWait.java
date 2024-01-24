@@ -12,9 +12,9 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsT
 
 public class ExplicitWait extends CommonHelper {
 
-    public static void hardWait(int timeValue) {
+    public static void pause(double seconds) {
         try {
-            Thread.sleep(timeValue);
+            Thread.sleep((long) (seconds * 1000L));
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -25,53 +25,54 @@ public class ExplicitWait extends CommonHelper {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void waitForVisibility(WebElement locator) {
+    public static void waitForVisibility(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
-        wait.until(ExpectedConditions.visibilityOf(locator));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public static void waitForElementsToBeClickable(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    public static void waitForElementsToBeClickable(WebElement locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    /*
-     *Auto wait
-     */
-    public static void waitForVisibility(By locator, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
+    public static void waitForVisibility(By locator, int durationSec) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(durationSec));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void waitForElementsToBeClickable(By locator, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    public static void waitForVisibility(WebElement locator, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
+    public static void waitForVisibility(WebElement locator, int durationSec) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(durationSec));
         wait.until(ExpectedConditions.visibilityOf(locator));
     }
 
-    public static void waitForElementsToBeClickable(WebElement locator, int pollingTime) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(pollingTime));
+    public static void waituntilElementToBeClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public static void waitUntilWindowOpen() {
+    public static void waituntilElementToBeClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
-        wait.until(numberOfWindowsToBe(2));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-//  --------------------------------------------------------------------------------------------------------------------
+    public static void waituntilElementToBeClickable(By locator, int durationSec) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(durationSec));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waituntilElementToBeClickable(WebElement locator, int durationSec) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(durationSec));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitUntilWindowOpen(int numberOfWindowsBefore) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        wait.until(numberOfWindowsToBe(numberOfWindowsBefore + 1));
+    }
 
     public static void waitForAllElements(List<WebElement> ele) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
         wait.until(ExpectedConditions.visibilityOfAllElements(ele));
+    }
+
+    public static void waitUntilElementIstReady(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CONSTANT.EXPLICIT_WAIT));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 }

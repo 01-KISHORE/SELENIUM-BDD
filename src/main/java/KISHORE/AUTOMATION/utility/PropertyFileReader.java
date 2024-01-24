@@ -6,8 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyFileReader {
-    private FileReader fileReader;
-    public String getData(String key){
+
+    public String getData(String key) {
+        FileReader fileReader;
         try {
             fileReader = new FileReader("resources/testConfig.properties");
         } catch (FileNotFoundException e) {

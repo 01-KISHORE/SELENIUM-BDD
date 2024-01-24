@@ -5,11 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class LoginComponent {
 
-    private WebDriver driver;
+    public final WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "//button[@aria-label='User Menu']")
     private WebElement userMenu;

@@ -1,12 +1,14 @@
 package KISHORE.AUTOMATION.pageObject;
 
+import KISHORE.AUTOMATION.pageComponent.EditProfileComponent;
 import KISHORE.AUTOMATION.pageComponent.HomeComponent;
 import KISHORE.AUTOMATION.pageComponent.LoginComponent;
 import KISHORE.AUTOMATION.pageComponent.ProjectComponent;
 import org.openqa.selenium.WebDriver;
 
 public class DeskObject {
-    private WebDriver driver;
+
+    public final WebDriver driver;
 
     public DeskObject(WebDriver driver) {
         this.driver = driver;
@@ -22,5 +24,9 @@ public class DeskObject {
 
     public ProjectComponent projectComponent() {
         return new ProjectComponent(driver);
+    }
+
+    public EditProfileComponent editProfileComponent(){
+        return new EditProfileComponent(driver);
     }
 }

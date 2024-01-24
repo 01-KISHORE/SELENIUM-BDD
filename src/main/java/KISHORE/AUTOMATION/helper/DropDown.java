@@ -1,31 +1,31 @@
 package KISHORE.AUTOMATION.helper;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class DropDown extends CommonHelper {
-    public static void clickOnDropDown(By locator){
-        ExplicitWait.waitForVisibility(locator);
-        getElement(locator).click();
-    }
-    public static void selectClassDropDownByVisibleTxt(By selectTag,String value){
-        AutoWait.autoWait(selectTag);
-        Select select = new Select(getElement(selectTag));
-        select.selectByVisibleText(value);
-    }
-    public static void selectClassDropDownByValue(By selectTag,String value){
-        AutoWait.autoWait(selectTag);
-        Select select = new Select(getElement(selectTag));
-        select.selectByValue(value);
-    }
 
-
-    public static String getText(By locator) {
-            return getElement(locator).getText();
-    }
-
-    public static String getText(WebElement locator) {
-        return locator.getText();
+    public void selectOption(WebElement element, String type, String value) {
+        // DropDown (enum) is attached for "type" parameter
+        // this.uiHome.selectOption(null, DropDown.VISIBLETEXT.toString(), "Option1");
+        try {
+            Select dropdown = new Select(element);
+            switch (type) {
+                case "visibleText":
+                    dropdown.selectByVisibleText(value);
+                    break;
+                case "index":
+                    dropdown.selectByIndex(Integer.parseInt(value));
+                    break;
+                case "value":
+                    dropdown.selectByValue(value);
+                    break;
+                default:
+                    System.out.println("DROPDOWN SYNTAX: 1-WebElement, 2-type(visibleText,index,value), 3-value");
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("DROPDOWN SELECTION FAILED");
+        }
     }
 }

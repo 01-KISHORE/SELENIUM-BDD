@@ -9,14 +9,23 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class HomeComponent {
-    public WebDriver driver;
+
+    private final WebDriver driver;
 
     @FindBy(how = How.PARTIAL_LINK_TEXT, using = "Welcome")
     private WebElement welcome;
 
+    @FindBy(how = How.XPATH, using = "//ul[@aria-labelledby='dropdownMenu']/li")
+    private List<WebElement> userDropdownOptions;
+
     @FindBy(how = How.XPATH, using = "//span[@class='caret']")
     private WebElement userDropdown;
+
+    @FindBy(how = How.XPATH, using = "//a[.=' Edit my account']")
+    private WebElement editMyAccountOption;
 
     @FindBy(how = How.XPATH, using = "//a[.=' Log out']")
     private WebElement logoutOption;
@@ -29,6 +38,23 @@ public class HomeComponent {
     public void logout() {
         userDropdown.click();
         logoutOption.click();
+    }
+
+    public void selectProfileOption(String option) {
+        userDropdown.click();
+        switch (option) {
+            case "Logout": {
+                logoutOption.click();
+            }
+            case "Edit my account": {
+                editMyAccountOption.click();
+            }
+            default: {
+                if (userDropdownOptions.isEmpty()) {
+                    System.out.println("Profile Dropdown is not VIEWED");
+                }
+            }
+        }
     }
 
     public void selectTab(String tabName) {
@@ -51,11 +77,9 @@ public class HomeComponent {
         }
     }
 
-
     public void verifyLogin(String result) {
-        boolean messageDisplayed = false;
         try {
-            messageDisplayed = welcome.isDisplayed();
+            boolean messageDisplayed = welcome.isDisplayed();
             if (messageDisplayed && result.equalsIgnoreCase("true"))
                 System.out.println("Valid User Successfully Logged IN");
             else if (!messageDisplayed && !result.equalsIgnoreCase("true"))
