@@ -9,10 +9,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ExcelFileReader {
-    FileInputStream inputStream ;
+    FileInputStream inputStream;
     HSSFWorkbook wb;
-    public void getData(String filePath,String sheetName){
-        File file =    new File(filePath);
+
+    public void getData(String filePath, String sheetName) {
+        File file = new File(filePath);
         //Create an object of FileInputStream class to read excel file
         try {
             inputStream = new FileInputStream(file);
@@ -26,17 +27,17 @@ public class ExcelFileReader {
             throw new RuntimeException(e);
         }
         //creating a Sheet object
-        HSSFSheet sheet=wb.getSheet(sheetName);
+        HSSFSheet sheet = wb.getSheet(sheetName);
         //get all rows in the sheet
-        int rowCount=sheet.getLastRowNum()-sheet.getFirstRowNum();
+        int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
         //iterate over all the row to print the data present in each cell.
-        for(int i=0;i<=rowCount;i++){
+        for (int i = 0; i <= rowCount; i++) {
             //get cell count in a row
-            int cellcount=sheet.getRow(i).getLastCellNum();
+            int cellcount = sheet.getRow(i).getLastCellNum();
             //iterate over each cell to print its value
-            System.out.println("Row"+ i+" data is :");
-            for(int j=0;j<cellcount;j++){
-                System.out.print(sheet.getRow(i).getCell(j).getStringCellValue() +",");
+            System.out.println("Row" + i + " data is :");
+            for (int j = 0; j < cellcount; j++) {
+                System.out.print(sheet.getRow(i).getCell(j).getStringCellValue() + ",");
             }
             System.out.println();
             //return based on the requirements
