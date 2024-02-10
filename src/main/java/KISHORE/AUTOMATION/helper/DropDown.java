@@ -5,12 +5,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DropDown extends CommonHelper {
 
-    public void selectOption(WebElement element, String type, String value) {
+    public void selectOption(WebElement element, String visibleIndexValue, String value) {
         // DropDown (enum) is attached for "type" parameter
         // this.uiHome.selectOption(null, DropDown.VISIBLETEXT.toString(), "Option1");
         try {
             Select dropdown = new Select(element);
-            switch (type) {
+            switch (visibleIndexValue) {
                 case "visibleText":
                     dropdown.selectByVisibleText(value);
                     break;
