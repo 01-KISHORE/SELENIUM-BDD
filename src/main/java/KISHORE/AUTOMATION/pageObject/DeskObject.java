@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 public class DeskObject {
 
     public final WebDriver driver;
+    public DeskObject deskObject;
+
 
     public DeskObject(WebDriver driver) {
         this.driver = driver;

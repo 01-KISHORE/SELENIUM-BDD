@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">KISHORE AUTOMATION</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 9, 2024 09:42:14 pm</span></a>
+<a href="#"><span class="badge badge-primary">Apr 10, 2024 08:36:16 pm</span></a>
 </li>
 </ul>
 </div>
@@ -57,11 +57,6 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -71,25 +66,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 9, 2024 09:42:14 pm</h3>
+<h3>Apr 10, 2024 08:36:16 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 9, 2024 09:42:19 pm</h3>
+<h3>Apr 10, 2024 08:36:26 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>5</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -105,12 +100,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>5</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -128,9 +123,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='100%'><b>6</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -148,10 +143,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
 <div>
-<small data-tooltip='42%'><b>12</b> steps failed,
-<b>16</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Login and Logout":1.829,"Projects tab testing":0.493,"Comparing UI and DB":0.544,"Edit Profile Details":1.072,"Parameter Type Test":0.551
+"Regular Expressions and Cucumber Annotation Example on Plain steps":9.052
 };
 </script>
 <div class="row">
@@ -178,11 +173,11 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>@DB</td>
-<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -219,21 +214,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 5,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 0,
-failChild: 6,
+passChild: 1,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 0,
-failGrandChild: 12,
+passGrandChild: 3,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 16,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -247,7 +242,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -261,25 +256,25 @@ eventsCount: 5,
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Login and Logout</p>
+            <p class="name">Regular Expressions and Cucumber Annotation Example on Plain steps</p>
             <p class="text-sm">
-              <span>9:42:14 pm</span> / <span>00:00:01:829</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>8:36:17 pm</span> / <span>00:00:09:052</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Login and Logout</h5>
-<span class='badge badge-success'>02.09.2024 9:42:14 pm</span>
-<span class='badge badge-danger'>02.09.2024 9:42:16 pm</span>
-<span class='badge badge-default'>00:00:01:829</span>
+<h5 class="test-status text-pass">Regular Expressions and Cucumber Annotation Example on Plain steps</h5>
+<span class='badge badge-success'>04.10.2024 8:36:17 pm</span>
+<span class='badge badge-danger'>04.10.2024 8:36:26 pm</span>
+<span class='badge badge-default'>00:00:09:052</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -291,918 +286,24 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Login and Logout test</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>DB comply</div>
       </div>
     </div>
-        <div class="scenario_outline ">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>Login and Logout test</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.configureBrowser()</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When User logs into the ECLIPSE application with "AutomationEngineeer" and "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>Then Login result should be "true"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When User logs out of application</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>Then User should be logged out successfully</span>
-      <div>Step skipped
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Projects tab testing</p>
-            <p class="text-sm">
-              <span>9:42:16 pm</span> / <span>00:00:00:493</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Projects tab testing</h5>
-<span class='badge badge-success'>02.09.2024 9:42:16 pm</span>
-<span class='badge badge-danger'>02.09.2024 9:42:17 pm</span>
-<span class='badge badge-default'>00:00:00:493</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="12"><span class="badge log fail-bg mr-2">Fail</span>Projects Filter</div>
-      </div>
-    </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.configureBrowser()</span>
+              <div class="step pass-bg" title="stepDefinition.CommonSteps.userLogsIntoTheApplicationWithUsernameAndPassword(java.lang.String,java.lang.String)">
+                <span>When User logs into the application with username "Dummy" and password "Login"</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
       </div>
               </div>
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.login(java.lang.String,java.lang.String)">
-                <span>When User logs into the ECLIPSE application with "AutomationEngineeer" and "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.verifyValidLogin(java.lang.String)">
-                <span>Then Login result should be "true"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.openTab(java.lang.String)">
-                <span>And Opens "Projects" tab on Home Page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.filterProject(java.lang.String)">
-                <span>And Filter the Projects as Eclipse Hawk and verify the filter results</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="20"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Comparing UI and DB</p>
-            <p class="text-sm">
-              <span>9:42:17 pm</span> / <span>00:00:00:544</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Comparing UI and DB</h5>
-<span class='badge badge-success'>02.09.2024 9:42:17 pm</span>
-<span class='badge badge-danger'>02.09.2024 9:42:17 pm</span>
-<span class='badge badge-default'>00:00:00:544</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>DB comply</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.configureBrowser()</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.userLogsIntoTheApplicationWithUsernameAndPassword(java.lang.String,java.lang.String)">
-                <span>When User logs into the application with username "ReyMysterio69" and password "Qwqwqw@*^_+!$12"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.userUpdatesHisNameAndAgeAs(java.lang.String,java.lang.String)">
+              <div class="step pass-bg" title="stepDefinition.CommonSteps.userUpdatesHisNameAndAgeAs(java.lang.String,java.lang.String)">
                 <span>And User updates his name as "KishoreN" and age as 26</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.verifyTheNewAgeByExecutingTheDBQuery(java.lang.String,java.lang.String)">
+              <div class="step pass-bg" title="stepDefinition.CommonSteps.verifyTheNewAgeByExecutingTheDBQuery(java.lang.String,java.lang.String)">
                 <span>Then Verify the new name KishoreN and age 26 by executing the DB Query</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="30"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Edit Profile Details</p>
-            <p class="text-sm">
-              <span>9:42:17 pm</span> / <span>00:00:01:072</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Edit Profile Details</h5>
-<span class='badge badge-success'>02.09.2024 9:42:17 pm</span>
-<span class='badge badge-danger'>02.09.2024 9:42:18 pm</span>
-<span class='badge badge-default'>00:00:01:072</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="31"><span class="badge log fail-bg mr-2">Fail</span>Profile Details</div>
-      </div>
-    </div>
-        <div class="scenario_outline ">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="32"><span class="badge log fail-bg mr-2">Fail</span>Profile Details</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.configureBrowser()</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When User logs into the ECLIPSE application with "AutomationEngineeer" and "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>And User does Edit PROFILE by uploading new ProfilePicture "D:\IWS\src\main\resources\sikkuliImage\img.png", "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>Profile Details</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.configureBrowser()</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>When User logs into the ECLIPSE application with "AutomationEngineeer" and "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>And User does Edit PROFILE by uploading new ProfilePicture "D:\IWS\src\main\resources\sikkuliImage\SearchIcon.png", "Qwqwqw@12345"</span>
-      <div>Step skipped
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="44"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Parameter Type Test</p>
-            <p class="text-sm">
-              <span>9:42:18 pm</span> / <span>00:00:00:551</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Parameter Type Test</h5>
-<span class='badge badge-success'>02.09.2024 9:42:18 pm</span>
-<span class='badge badge-danger'>02.09.2024 9:42:19 pm</span>
-<span class='badge badge-default'>00:00:00:551</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="45"><span class="badge log fail-bg mr-2">Fail</span>PT</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.configureBrowser()</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-F9LGDQJ', ip: '192.168.6.43'
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}]}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:208)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:157)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:152)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-	at base.BaseClass.launchBrowser(BaseClass.java:38)
-	at stepDefinition.CommonSteps.configureBrowser(CommonSteps.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:89)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: java.io.IOException: Cannot run program "C:\Users\Softsuave\.cache\selenium\geckodriver\win64\0.34.0-win\geckodriver.exe": CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
-	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:191)
-	... 61 more
-Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is not compatible with the version of Windows you're running. Check your computer's system information and then contact the software publisher
-	at java.base/java.lang.ProcessImpl.create(Native Method)
-	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
-	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
-	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
-	... 63 more
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step fail-bg" title="BEFORE">
-                <span>stepDefinition.CommonSteps.hitURL()</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "stepDefinition.CommonSteps.driver" is null
-	at stepDefinition.CommonSteps.hitURL(CommonSteps.java:40)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinition.CommonSteps.testParameterType(boolean)">
-                <span>Then Testing Boolean Parameter type true</span>
-      <div>Step skipped
       </div>
               </div>
           </div>
@@ -1231,7 +332,7 @@ Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is n
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
 </span>
 <p class="name">@DB</p>
 <p class="duration text-sm">1 tests</p>
@@ -1239,7 +340,7 @@ Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is n
 <div class="test-contents d-none">
 <div class="info">
 <h4>@DB</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1250,201 +351,13 @@ Caused by: java.io.IOException: CreateProcess error=216, This version of %1 is n
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:17 pm</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:36:17 pm</td>
 <td>
-<a href="#" class="linked" test-id='20' id='21'>DB comply</a>
+<a href="#" class="linked" test-id='1' id='2'>DB comply</a>
 <div class="">
-<span class="badge badge-default">Comparing UI and DB.DB comply</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>6</span>
-</span>
-<p class="name">java.lang.NullPointerException</p>
-<p class="duration text-sm">6 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.NullPointerException</h4>
-<span status="fail" class='badge log badge-danger'>6 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:16 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='5'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Login and Logout.Login and Logout test.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:17 pm</td>
-<td>
-<a href="#" class="linked" test-id='11' id='14'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Projects tab testing.Projects Filter.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:17 pm</td>
-<td>
-<a href="#" class="linked" test-id='20' id='23'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Comparing UI and DB.DB comply.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:18 pm</td>
-<td>
-<a href="#" class="linked" test-id='30' id='34'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Edit Profile Details.Profile Details.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:18 pm</td>
-<td>
-<a href="#" class="linked" test-id='30' id='40'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Edit Profile Details.Profile Details.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:19 pm</td>
-<td>
-<a href="#" class="linked" test-id='44' id='47'>stepDefinition.CommonSteps.hitURL()</a>
-<div class="">
-<span class="badge badge-default">Parameter Type Test.PT.stepDefinition.CommonSteps.hitURL()</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>6</span>
-</span>
-<p class="name">org.openqa.selenium.SessionNotCreatedException</p>
-<p class="duration text-sm">6 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.SessionNotCreatedException</h4>
-<span status="fail" class='badge log badge-danger'>6 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:14 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='4'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Login and Logout.Login and Logout test.stepDefinition.CommonSteps.configureBrowser()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:16 pm</td>
-<td>
-<a href="#" class="linked" test-id='11' id='13'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Projects tab testing.Projects Filter.stepDefinition.CommonSteps.configureBrowser()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:17 pm</td>
-<td>
-<a href="#" class="linked" test-id='20' id='22'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Comparing UI and DB.DB comply.stepDefinition.CommonSteps.configureBrowser()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:17 pm</td>
-<td>
-<a href="#" class="linked" test-id='30' id='33'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Edit Profile Details.Profile Details.stepDefinition.CommonSteps.configureBrowser()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:18 pm</td>
-<td>
-<a href="#" class="linked" test-id='30' id='39'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Edit Profile Details.Profile Details.stepDefinition.CommonSteps.configureBrowser()</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>21:42:18 pm</td>
-<td>
-<a href="#" class="linked" test-id='44' id='46'>stepDefinition.CommonSteps.configureBrowser()</a>
-<div class="">
-<span class="badge badge-default">Parameter Type Test.PT.stepDefinition.CommonSteps.configureBrowser()</span>
+<span class="badge badge-default">Regular Expressions and Cucumber Annotation Example on Plain steps.DB comply</span>
 </div>
 </td>
 </tr>

@@ -1,5 +1,6 @@
 package KISHORE.AUTOMATION.helper;
 
+import KISHORE.AUTOMATION.pageObject.DeskObject;
 import KISHORE.AUTOMATION.utility.CONSTANT;
 import KISHORE.AUTOMATION.utility.PropertyFileReader;
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 public class CommonHelper {
 
     public static WebDriver driver;
+    public static DeskObject deskObject;
 
     public CommonHelper() {
         PropertyFileReader propertyFileReader = new PropertyFileReader();

@@ -42,4 +42,17 @@ public class ElementInfo extends CommonHelper {
     public static String getCssValue(WebElement element, String cssAttribute) {
         return element.getCssValue(cssAttribute);
     }
+
+    public static String getAttribute(WebElement element, String AttributeName){
+        return element.getAttribute(AttributeName);
+        // For attributes having boolean values, the getAttribute() method will return either true or null.
+    }
+
+    public static String getDOMAttribute(WebElement element, String AttributeName){
+        return element.getDomAttribute(AttributeName);
+    }
+
+    public static String getDOMProperty(WebElement element, String AttributeName){
+        return element.getDomProperty(AttributeName);
+    }
 }

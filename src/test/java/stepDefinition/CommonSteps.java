@@ -19,7 +19,7 @@ import java.util.List;
 public class CommonSteps {
 
     public static WebDriver driver;
-    public DeskObject deskObject;
+    public static DeskObject deskObject;
     private String name;
     private String age;
 
@@ -66,8 +66,9 @@ public class CommonSteps {
     //  STEP-DEFINITIONS
     @When("User logs into the ECLIPSE application with {string} and {string}")
     public void login(String username, String password) throws FindFailed, InterruptedException {
+        deskObject.loginComponent().acceptCookies();
         deskObject.loginComponent().login(username, password);
-        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
+        //  SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/YellowSearch.png");
     }
 
     @When("Opens {string} tab on Home Page")
@@ -90,8 +91,8 @@ public class CommonSteps {
     @When("User does Edit PROFILE by uploading new ProfilePicture {string}, {string}")
     public void editProfile(String filePath, String password) throws FindFailed {
         deskObject.homeComponent().selectProfileOption("Edit my account");
-        deskObject.editProfileComponent().updateProfile(new File(filePath), password);
-        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/SearchIcon.png");
+        deskObject.editProfileComponent().updateProfile(new File(System.getProperty("user.dir") + filePath), password);
+        SikuliCl.clickOnImage("./src/main/resources/sikkuliImage/YellowSearch.png");
         Alerts.isAlertPresent();
         Alerts.acceptAlert();
     }
@@ -119,7 +120,8 @@ public class CommonSteps {
         System.out.println("User successfully Updated his NAME: " + name + ", and AGE:" + age);
     }
 
-    @Then("^Verify the new name ([^\"]+) and age (\\d+) by executing the DB Query$")    //Without double quotes
+    @Then("^Verify the new name ([^\"]+) and age (\\d+) by executing the DB Query$")
+    //Without double quotes: String and digit
     public void verifyTheNewAgeByExecutingTheDBQuery(String name, String age) {
         if (this.name.equals(name) && this.age.equals(age)) {
             System.out.println("Verified name and age from DB");

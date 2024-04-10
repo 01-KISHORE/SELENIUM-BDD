@@ -5,4 +5,3 @@
 # Regular Expression(^$)    >>
 # (\\d)+                >>    2                      One or more Digit
 # \"([^\"]+)\"          >>    "value"                Any character except double quotes
-#

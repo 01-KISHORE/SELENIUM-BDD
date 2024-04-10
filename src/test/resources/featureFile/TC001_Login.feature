@@ -1,6 +1,6 @@
 Feature: Login and Logout
 
-  Scenario Outline: Login and Logout test
+  Scenario Outline: Testing Login and Logout functionality
 
     When User logs into the ECLIPSE application with "<username>" and "<password>"
     Then Login result should be "<result>"

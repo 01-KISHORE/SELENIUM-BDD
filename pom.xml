@@ -26,11 +26,7 @@
             <scope>test</scope>
         </dependency>
         <!-- SELENIUM -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.0.0-rc-2</version>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <!-- CUCUMBER JAVA -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -54,8 +50,9 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>4.4.3</version>
+            <version>5.7.0</version>
         </dependency>
+
         <!-- SIKULIX -->
         <dependency>
             <groupId>com.sikulix</groupId>

@@ -28,6 +28,9 @@ public class LoginComponent {
     @FindBy(how = How.XPATH, using = "//h1[.='Welcome to Eclipse']|//a[.=' Log in']")
     private WebElement loginPage;
 
+    @FindBy(how = How.XPATH, using = "//a[.='Allow cookies']")
+    private WebElement acceptCookiesBtn;
+
     public LoginComponent(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -43,5 +46,9 @@ public class LoginComponent {
 
     public void verifyLogout() {
         junit.framework.Assert.assertTrue(loginPage.isDisplayed());
+    }
+
+    public void acceptCookies() {
+        acceptCookiesBtn.click();
     }
 }

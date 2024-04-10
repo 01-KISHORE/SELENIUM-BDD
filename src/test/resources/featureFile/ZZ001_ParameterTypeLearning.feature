@@ -1,4 +1,4 @@
 Feature: Parameter Type Test
 
-  Scenario: PT
+  Scenario: Parameter Type example
     Then Testing Boolean Parameter type true
